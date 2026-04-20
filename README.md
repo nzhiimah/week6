@@ -51,6 +51,10 @@ gobuster dir -u http://10.49.146.104 -w /usr/share/wordlists/dirbuster/directory
 - File : .png / .jpg
 - encoded data
 
+<img width="876" height="234" alt="Screenshot 2026-04-20 220328" src="https://github.com/user-attachments/assets/f5b3019d-e6a5-4186-82ed-51383335a5ed" />
+
+<br>
+
 #### Action taken :
 - decode using Base 58
 - retrieve password
