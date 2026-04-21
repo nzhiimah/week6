@@ -20,6 +20,8 @@ nmap -sC -sV -p- 10.49.146.104
   http://10.49.146.104
 ```
 <img width="991" height="127" alt="Screenshot 2026-04-20 213248" src="https://github.com/user-attachments/assets/d635bcb1-3263-4979-90c1-44dc24e4dc41" />
+<br>
+<img width="1129" height="799" alt="Screenshot 2026-04-21 110227" src="https://github.com/user-attachments/assets/290da14c-8fda-4c02-bbee-009bd9af8ca2" />
 
 <br>
 
@@ -32,6 +34,9 @@ gobuster dir -u http://10.49.146.104 -w /usr/share/wordlists/dirbuster/directory
 ```
 #### Result :
 - /island
+<img width="1010" height="658" alt="Screenshot 2026-04-21 110424" src="https://github.com/user-attachments/assets/c643206e-41e7-4f48-918e-84156312a4ac" />
+
+<br>
 
 ### 4. Hidden Directory Analysis
 
