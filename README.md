@@ -153,7 +153,7 @@ ftp 10.49.153.26
 | Web directory found | `/2100` |
 | File name found | `green_arrow.ticket` |
 | FTP password | `!#th3h00d` |
-| SSH clue file | `shado` |
+| SSH password | `shado` |
 | user.txt | *(to be completed)* |
 | root.txt | *(to be completed)* |
 
