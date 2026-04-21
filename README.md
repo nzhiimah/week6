@@ -1,42 +1,59 @@
 # week 6 : Lian Yu TryHackMe
 
-### Target Information 
-- Target IP : 10.49.146.104
+### 1. Introduction
 
-### 1. Finding open Ports
+This write-up documents the exploitation process for the Lian Yu TryHackMe room.
+
+⚠️ Note: The target IP address is dynamically assigned by TryHackMe. It may change each time the lab is started or reset. All commands below were executed using the active session IP during testing.
+
+-----
+
+### 2. Target Information 
+- Target IP : 10.49.xxx.xxx 
+
+### 3. Port Scanning
 
 ```
-nmap -sC -sV -p- 10.49.146.104
+nmap -sC -sV -p- <target-ip>
 ```
 
-#### Result : 
+#### Discovered services : 
 - Port 80 -> website
 - Port 21 -> FTP
 - Port 22 -> SSH
 
-### 2. Checking the website
+<img width="1002" height="380" alt="Screenshot 2026-04-21 110130" src="https://github.com/user-attachments/assets/82f9a869-f50e-4490-add5-63d68a464bc2" />
+
+<br>
+
+### 4. Web Enumeration
 
 ```
-  http://10.49.146.104
+  http://<target-ip>
 ```
-<img width="991" height="127" alt="Screenshot 2026-04-20 213248" src="https://github.com/user-attachments/assets/d635bcb1-3263-4979-90c1-44dc24e4dc41" />
-<br>
 <img width="1129" height="799" alt="Screenshot 2026-04-21 110227" src="https://github.com/user-attachments/assets/290da14c-8fda-4c02-bbee-009bd9af8ca2" />
 
 <br>
 
-###  3. Directory Brute Force
-
+###  5. Directory Brute Force
 
 Command used : 
 ```
 gobuster dir -u http://10.49.146.104 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 #### Result :
-- /island
+- /island directory found
 <img width="1010" height="658" alt="Screenshot 2026-04-21 110424" src="https://github.com/user-attachments/assets/c643206e-41e7-4f48-918e-84156312a4ac" />
 
 <br>
+
+### 6. Hidden Directory Exploration
+
+
+```
+  http://<target-ip>/island/
+```
+
 <img width="945" height="406" alt="Screenshot 2026-04-21 110717" src="https://github.com/user-attachments/assets/110eb3db-64c6-48a3-93e4-c9240bda81be" />
 <br>
 
@@ -44,12 +61,20 @@ Command used :
 ```
 gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
+
+#### Result :
+- Additional hidden structure discovered under /island
+  
 <img width="1002" height="625" alt="Screenshot 2026-04-21 111240" src="https://github.com/user-attachments/assets/6be0159b-61b5-488a-88ed-62f284e73a1e" />
 
 <br>
 
-### 4. Hidden Directory Analysis
+### 7. Deeper Hidden Path Discovery
 
+#### Found Directory :
+```
+/island/2100
+```
 #### Checking the website
 
 ```
@@ -65,8 +90,7 @@ gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/di
 
 <br>
 
-### 5. Clue Discovery
-
+### 8. Hidden File Discovery
 
 Command used : 
 ```
@@ -75,8 +99,12 @@ gobuster dir -u http://10.49.153.26/island/2100 -w /usr/share/wordlists/dirbuste
 <img width="1004" height="663" alt="Screenshot 2026-04-21 111900" src="https://github.com/user-attachments/assets/78f5c977-a483-4372-9bfa-445800ff167a" />
 <br>
 
+#### Result :
+```
+green_arrow.ticket
+```
+### 9. Hidden File Analysis
 #### Checking the website
-
 ```
  http://10.49.153.26/island/2100/green_arrow.ticket
 ```
@@ -95,24 +123,39 @@ gobuster dir -u http://10.49.153.26/island/2100 -w /usr/share/wordlists/dirbuste
 
   <br>
 
+#### Result :
+- FTP password :
+
+ ```
+ !#th3h00d
+ ```
+
+### 10. FTP Access
+
 Command used :
 
 ```
 ftp 10.49.153.26
 ```
 
-#### Found :
-- jpg and png
+#### Outcome :
+- Successfully logged into FTP server
+- Retrieved files:
+  - .jpg
+  - .png
+    
 <img width="995" height="661" alt="Screenshot 2026-04-21 112453" src="https://github.com/user-attachments/assets/a317ec0d-e472-44a6-b69e-3280d0320285" />
 
 <br>  
   
-#### Questions: 
+### 11. Answers : 
 
-1. Web Directory found : 2100
-2. File Name found : green_arrow.ticket
-3. FTP Password : !#th3h00d
-4. File name with SSH password : shado
-5. user.txt:
-6. root.txt :
+| Question | Answer |
+|----------|--------|
+| Web directory found | `/2100` |
+| File name found | `green_arrow.ticket` |
+| FTP password | `!#th3h00d` |
+| SSH clue file | `shado` |
+| user.txt | *(to be completed)* |
+| root.txt | *(to be completed)* |
 
