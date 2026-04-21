@@ -38,6 +38,14 @@ gobuster dir -u http://10.49.146.104 -w /usr/share/wordlists/dirbuster/directory
 
 <br>
 
+Command used : 
+```
+gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
+<img width="1002" height="625" alt="Screenshot 2026-04-21 111240" src="https://github.com/user-attachments/assets/6be0159b-61b5-488a-88ed-62f284e73a1e" />
+
+<br>
+
 ### 4. Hidden Directory Analysis
 
   #### Found :
