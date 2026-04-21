@@ -2,8 +2,6 @@
 
 ### 1. Introduction
 
-This write-up documents the exploitation process for the Lian Yu TryHackMe room.
-
 ⚠️ Note: The target IP address is dynamically assigned by TryHackMe. It may change each time the lab is started or reset. All commands below were executed using the active session IP during testing.
 
 -----
