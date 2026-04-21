@@ -48,6 +48,15 @@ gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/di
 
 ### 4. Hidden Directory Analysis
 
+### 2. Checking the website
+
+```
+ http://10.49.153.26/island/2100/
+```
+
+<img width="1141" height="766" alt="Screenshot 2026-04-21 111444" src="https://github.com/user-attachments/assets/083fd5bc-7ccc-4789-bb4c-b9e3a7a4e3dd" />
+<br>
+
   #### Found :
   - clues in source code :
 <img width="685" height="367" alt="Screenshot 2026-04-20 215016" src="https://github.com/user-attachments/assets/0ba89440-a3c9-43f1-bfd6-65b57b19b7f3" />
