@@ -37,6 +37,8 @@ gobuster dir -u http://10.49.146.104 -w /usr/share/wordlists/dirbuster/directory
 <img width="1010" height="658" alt="Screenshot 2026-04-21 110424" src="https://github.com/user-attachments/assets/c643206e-41e7-4f48-918e-84156312a4ac" />
 
 <br>
+<img width="945" height="406" alt="Screenshot 2026-04-21 110717" src="https://github.com/user-attachments/assets/110eb3db-64c6-48a3-93e4-c9240bda81be" />
+<br>
 
 Command used : 
 ```
@@ -48,7 +50,7 @@ gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/di
 
 ### 4. Hidden Directory Analysis
 
-### 2. Checking the website
+#### Checking the website
 
 ```
  http://10.49.153.26/island/2100/
@@ -63,12 +65,15 @@ gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/di
 
 <br>
 
-<img width="945" height="406" alt="Screenshot 2026-04-21 110717" src="https://github.com/user-attachments/assets/110eb3db-64c6-48a3-93e4-c9240bda81be" />
-
-
-<br>
-
 ### 5. Clue Discovery
+
+
+Command used : 
+```
+gobuster dir -u http://10.49.153.26/island/2100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x ticket
+```
+<img width="1004" height="663" alt="Screenshot 2026-04-21 111900" src="https://github.com/user-attachments/assets/78f5c977-a483-4372-9bfa-445800ff167a" />
+<br>
 
 #### Found :
 - File : .png / .jpg
@@ -85,6 +90,7 @@ gobuster dir -u http://10.49.153.26/island/ -w /usr/share/wordlists/dirbuster/di
 <img width="968" height="590" alt="Screenshot 2026-04-20 220554" src="https://github.com/user-attachments/assets/04e21b90-488a-4e96-a1d5-6ebb378db36e" />
 
   <br>
+  
 #### Questions: 
 1. Web Directory found : 2100
 2. File Name found :
