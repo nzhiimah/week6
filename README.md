@@ -75,9 +75,13 @@ gobuster dir -u http://10.49.153.26/island/2100 -w /usr/share/wordlists/dirbuste
 <img width="1004" height="663" alt="Screenshot 2026-04-21 111900" src="https://github.com/user-attachments/assets/78f5c977-a483-4372-9bfa-445800ff167a" />
 <br>
 
+#### Checking the website
+
+```
+ http://10.49.153.26/island/2100/green_arrow.ticket
+```
+
 #### Found :
-- File : .png / .jpg
-- encoded data
 
 <img width="876" height="234" alt="Screenshot 2026-04-20 220328" src="https://github.com/user-attachments/assets/f5b3019d-e6a5-4186-82ed-51383335a5ed" />
 
@@ -90,12 +94,25 @@ gobuster dir -u http://10.49.153.26/island/2100 -w /usr/share/wordlists/dirbuste
 <img width="968" height="590" alt="Screenshot 2026-04-20 220554" src="https://github.com/user-attachments/assets/04e21b90-488a-4e96-a1d5-6ebb378db36e" />
 
   <br>
+
+Command used :
+
+```
+ftp 10.49.153.26
+```
+
+#### Found :
+- jpg and png
+<img width="995" height="661" alt="Screenshot 2026-04-21 112453" src="https://github.com/user-attachments/assets/a317ec0d-e472-44a6-b69e-3280d0320285" />
+
+<br>  
   
 #### Questions: 
+
 1. Web Directory found : 2100
-2. File Name found :
-3. FTP Password :
-4. File name with SSH password :
+2. File Name found : green_arrow.ticket
+3. FTP Password : !#th3h00d
+4. File name with SSH password : shado
 5. user.txt:
 6. root.txt :
 
