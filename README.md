@@ -46,7 +46,8 @@ gobuster dir -u http://10.49.146.104 -w /usr/share/wordlists/dirbuster/directory
 
 <br>
 
-<img width="1152" height="421" alt="Screenshot 2026-04-20 214211" src="https://github.com/user-attachments/assets/6b584206-d515-40ff-bfef-1bbaa8ddcda4" />
+<img width="945" height="406" alt="Screenshot 2026-04-21 110717" src="https://github.com/user-attachments/assets/110eb3db-64c6-48a3-93e4-c9240bda81be" />
+
 
 <br>
 
