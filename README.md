@@ -158,6 +158,10 @@ get .other_user
 ```
 steghide extract -sf aa.jpg
 ```
+<img width="697" height="247" alt="Screenshot 2026-04-23 121546" src="https://github.com/user-attachments/assets/0ecff6fc-c675-489b-91b7-21855983bfbb" />
+
+<br>
+
 #### Output:
 - Extracted file: ss.zip
 
@@ -175,10 +179,6 @@ cat shado
 ```
 #### Result :
 - SSH Password : M3tahuman
-
-<img width="697" height="247" alt="Screenshot 2026-04-23 121546" src="https://github.com/user-attachments/assets/0ecff6fc-c675-489b-91b7-21855983bfbb" />
-
-<br>
 
 ### 12. User Enumeration : 
 
