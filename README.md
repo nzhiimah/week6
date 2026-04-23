@@ -133,7 +133,7 @@ green_arrow.ticket
 Command used :
 
 ```
-ftp 10.49.153.26
+ftp <target-ip>
 ```
 
 #### Outcome :
@@ -158,12 +158,29 @@ get .other_user
 ```
 steghide extract -sf aa.jpg
 ```
+#### Output:
+- Extracted file: ss.zip
+
+#### Unzip contents
+```
+unzip ss.zip
+```
+#### Files obtained :
+- passwd.txt
+- shado
+
+#### Retrieve SSH password
+```
+cat shado
+```
+#### Result :
+- SSH Password : M3tahuman
+
 <img width="697" height="247" alt="Screenshot 2026-04-23 121546" src="https://github.com/user-attachments/assets/0ecff6fc-c675-489b-91b7-21855983bfbb" />
 
 <br>
 
-#### Output:
-- Extracted file: ss.zip
+### 12. User Enumeration : 
 
 ### 17. Answers : 
 
