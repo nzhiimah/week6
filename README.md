@@ -145,8 +145,27 @@ ftp 10.49.153.26
 <img width="995" height="661" alt="Screenshot 2026-04-21 112453" src="https://github.com/user-attachments/assets/a317ec0d-e472-44a6-b69e-3280d0320285" />
 
 <br>  
-  
-### 11. Answers : 
+
+#### Download files:
+```
+get aa.jpg
+get .other_user
+```
+
+### 11. Steganography Analysis : 
+
+#### Extract hidden data from image :
+```
+steghide extract -sf aa.jpg
+```
+<img width="697" height="247" alt="Screenshot 2026-04-23 121546" src="https://github.com/user-attachments/assets/0ecff6fc-c675-489b-91b7-21855983bfbb" />
+
+<br>
+
+#### Output:
+- Extracted file: ss.zip
+
+### 17. Answers : 
 
 | Question | Answer |
 |----------|--------|
