@@ -251,7 +251,7 @@ cat /root/root.txt
 | Web directory found | `/2100` |
 | File name found | `green_arrow.ticket` |
 | FTP password | `!#th3h00d` |
-| SSH password | `shado` |
-| user.txt | *(to be completed)* |
-| root.txt | *(to be completed)* |
+| File name with SSH password | `shado` |
+| user.txt |THM{P30P7E_K33P_53CRET5__C0MPUT3R5_D0N'T} |
+| root.txt | THM{MY_W0RD_I5_MY_B0ND_IF_I_ACC3PT_YOUR_CONTRACT_THEN_IT_WILL_BE_COMPL3TED_OR_I'LL_BE_D34D} |
 
